@@ -1,0 +1,22 @@
+{
+	"folders": [
+		{
+			"path": "../../../Aprendiendo CSS/maquetacion-1/maquetación-2"
+		},
+		{
+			"path": "../../../REPASO"
+		},
+		{
+			"path": "../../../Aprendiendo CSS"
+		},
+		{
+			"path": "../.."
+		},
+		{
+			"path": "../../../Curso-JavaScript"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Curso-JavaScript"
+	}
+}

@@ -1,0 +1,2692 @@
+/*Variables*/
+
+
+
+:root {
+    --mx-width: 1320px;
+    --color-text-body: #525260;
+    --color-primary: #89CDBE;
+    --color-menu-superior: linear-gradient(to top, white 90%, rgba(255, 255, 255, 0.5));
+    --color-text-hover: #FFFFFF;
+    --color-banner: #0cbbac;
+    --color-text-btn: #0d6efd;
+    --color-bg-html: #FBFBFB;
+    --color-subtitle: #c75c6f;
+    --color-title: #000000;
+    --color-description: #99A1AA;
+    --color-hover-dark: #303035;
+    --color-banner: linear-gradient(to bottom, rgba(44, 134, 161, 0.527), rgba(31, 172, 101, 0));
+    --color-bg-btn: #3B91D6;
+    --color-bg-projects: #ecf2f6;
+    --color-bg-dark: #27272e;
+    --color-line-table-box: #e3e6e9;
+}
+
+
+
+/*Estilo para la barra de Scroll**/
+
+body::-webkit-scrollbar {
+    width: 20px;
+    /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+    background: rgb(255, 255, 255);
+    /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: rgba(224, 224, 241, 0);
+    /* color of the scroll thumb */
+    border: radius 0px;
+    /* roundness of the scroll thumb */
+    border: 3px solid orange;
+    /* creates padding around scroll thumb */
+}
+
+
+/*Estilos generales*/
+
+
+
+html {
+
+    font-size: 10px;
+    overflow-x: hidden;
+    background-color: var(--color-bg-html);
+
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    font-size: 1.6rem;
+    font-family: 'DM Sans', sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    color: var(--color-text-body);
+    scrollbar-width: thin;
+    scrollbar-color: --color-hover-dark;
+    /* Barra negra y fondo transparente */
+
+    /* Degradado en la parte superior del body para combinar con el menú */
+    background: --color-menu-superior padding-top 80px;
+    cursor: url('../img/cursorProyecto.png'), auto;
+    padding-top: 300px;
+}
+
+/* Works on Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-hover-dark);
+    /* Barra negra y fondo transparente */
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+    background: transparent;
+    /* Fondo completamente transparente */
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: black;
+    /* Barra negra */
+    border-radius: 20px;
+    border: 3px solid orange;
+}
+
+
+/*ESTRUCTURA*/
+
+.layout {
+
+
+    width: 100%;
+    min-width: 1200px;
+    height: 100%;
+
+}
+
+/* Menú con altura reducida */
+/* Menú más compacto */
+.layout__menu {
+    width: 100%;
+    height: 140px;
+    /* Fijamos una altura más pequeña */
+    padding: 0.5rem 1.5rem;
+    /* Reducimos el padding */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+    /* Degradado en la parte baja para fusionarlo con el body */
+    background: rgb(44 123 161 / 17%);
+    backdrop-filter: blur(8px);
+    /* Efecto de desenfoque */
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    /* Centra los elementos verticalmente */
+}
+
+#toggle-dark {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 99999;
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+
+/* Estilo inicial del logo */
+.navbar__logo {
+    width: 187px;
+    transition: transform 300ms ease-in-out, opacity 300ms ease-in-out;
+}
+
+/* Estilo para cuando el logo se hace más pequeño al hacer scroll */
+.navbar__logo.shrunk {
+    transform: scale(0.7);
+    /* Ajusta el valor según el tamaño deseado */
+}
+
+/* Cuando se hace scroll */
+.scrolled {
+    height: 90px;
+    padding: 0.3rem 1rem;
+    backdrop-filter: blur(10px);
+}
+
+/* Contenedor del menú */
+.menu__navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.navbar__logo:hover {
+    transform: scale(1.02);
+    opacity: 0.8;
+}
+
+/* Lista de navegación */
+.nav__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Elementos de la navegación */
+.nav__item {
+    position: relative;
+    margin: 0 2.4rem;
+}
+
+/* Estilos de los enlaces del menú */
+.nav__title {
+    font-weight: 500;
+    color: var(--color-text-body);
+    text-decoration: none;
+    transition: color 300ms ease-in-out;
+}
+
+.nav__title:hover {
+    color: var(--color-text-hover);
+    background-color: var(--color-primary);
+    box-shadow: 0px 0px 6px 10px var(--color-primary);
+    border-radius: 0.5rem;
+}
+
+/* Línea animada debajo del texto */
+.nav__title::before {
+    content: "";
+    height: 0.2rem;
+    width: 0;
+    background-color: var(--color-text-hover);
+    position: absolute;
+    bottom: -0.2rem;
+    left: 0;
+    opacity: 0;
+    transition: 500ms;
+}
+
+.nav__title:hover::before {
+    width: 100%;
+    opacity: 1;
+}
+
+/* Estilos del submenú */
+.nav__submenu {
+    position: absolute;
+    top: 4.3rem;
+    left: 2rem;
+    min-width: 19rem;
+    padding: 1.5rem 1rem;
+    border-radius: 8px;
+    background-color: var(--color-text-hover);
+    box-shadow: 0px 13px 48px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 300ms ease-in-out, transform 200ms ease-in-out;
+    transform: translateY(10px);
+}
+
+/* Animación de aparición del submenú */
+.nav__item:hover>.nav__submenu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Elementos del submenú */
+.submenu__item {
+    transition: all 300ms ease-in-out;
+    opacity: 0;
+    transform: translateX(2rem);
+}
+
+/* Añadir retraso en la animación de cada elemento */
+.submenu__item:nth-child(1) {
+    transition-delay: 100ms;
+}
+
+.submenu__item:nth-child(2) {
+    transition-delay: 200ms;
+}
+
+.submenu__item:nth-child(3) {
+    transition-delay: 300ms;
+}
+
+.submenu__item:nth-child(4) {
+    transition-delay: 400ms;
+}
+
+.submenu__item:nth-child(5) {
+    transition-delay: 500ms;
+}
+
+.nav__item:hover .submenu__item {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Estilos de los enlaces del submenú */
+.submenu__title {
+    display: block;
+    font-size: 1.4rem;
+    font-weight: 500;
+    text-decoration: none;
+    color: var(--color-text-body);
+    padding: 0.7rem 1.5rem;
+    transition: color 300ms ease-in-out;
+}
+
+.submenu__title:hover {
+    color: var(--color-primary);
+}
+
+/* Línea animada debajo del texto en hover */
+.submenu__title::after {
+    content: "";
+    height: 0.3rem;
+    width: 0%;
+    background-color: var(--color-primary);
+    position: absolute;
+    top: 69%;
+    left: 0;
+    transition: all 300ms ease-in-out;
+}
+
+.submenu__title:hover::after {
+    width: 54%;
+}
+
+
+
+
+
+/* Estilos para el BANNER*/
+
+.layout__banner {
+
+    margin: 0 3rem;
+    position: relative;
+    padding-right: 0;
+    padding-left: 10;
+    padding-top: 15rem;
+    padding-bottom: 20rem;
+    width: calc(100% - 6rem);
+    min-height: 60rem;
+    border-radius: 60px;
+    overflow: hidden;
+    background: --color-banner;
+    box-shadow: 0 0px 2px 2px var(--color-banner);
+
+}
+
+
+.banner__content {
+
+    display: inline-block;
+    width: 50%;
+    padding: 0 1.5rem;
+
+
+}
+
+
+.banner__title {
+
+    color: var(--color-text-hover);
+    font-weight: 500;
+    line-height: 1.2;
+    font-size: 8rem;
+    margin-bottom: 3rem;
+    z-index: 9999;
+
+}
+
+/* Estilos generales del botón */
+.btn-2 {
+    position: relative;
+    display: inline-block;
+    padding: 90px 77px;
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #ffffff;
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    cursor: pointer;
+    overflow: hidden;
+    transition: color 0.5s ease-in-out, border-color 0.5s ease-in-out, background-color 0.5s ease-in-out;
+    text-decoration: none;
+}
+
+/* Efecto de hover: fondo blanco y cambio de color de la fuente */
+.btn-2:hover {
+    color: #E2CE5F;
+    background-color: #ffffff;
+}
+
+/* Efecto de superposición en hover */
+.btn-2::before,
+.btn-2::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    transition: transform 0.5s ease-in-out;
+    z-index: -1;
+}
+
+.btn-2::before {
+    top: 0;
+    left: 0;
+    transform: scaleY(0);
+    transform-origin: bottom;
+}
+
+.btn-2::after {
+    left: 0;
+    top: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+}
+
+/* Cuando el usuario pasa el mouse, activa el efecto */
+.btn-2:hover::before {
+    transform: scaleY(1);
+}
+
+.btn-2:hover::after {
+    transform: scaleX(1);
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .btn-2 {
+        font-size: 1.4rem;
+        padding: 10px 20px;
+    }
+}
+
+
+
+
+
+.shapes__item--shape1 {
+
+
+    text-align: right;
+    top: 0;
+    right: 0;
+    z-index: 1;
+
+    animation-name: showRight;
+    animation-duration: 1s;
+
+}
+
+@keyframes showRight {
+    0% {
+        transform: translateX(50%);
+
+    }
+
+
+    100% {
+
+        transform: translateX(0%);
+
+    }
+}
+
+
+.shapes__item--shape2 {
+
+    top: 14;
+    left: 0;
+    z-index: 1;
+
+    animation-name: showLeft;
+    animation-duration: 1s;
+}
+
+@keyframes showLeft {
+
+    0% {
+
+        transform: translateX(-50%);
+
+    }
+
+    100% {
+
+        transform: translateX(0%);
+
+    }
+
+
+}
+
+
+.shapes__item--shape3 {
+
+
+    top: 34%;
+    left: 50%;
+    animation: moveShape3 20s infinite;
+    z-index: -2;
+
+}
+
+@keyframes moveShape3 {
+
+
+    0% {
+
+        transform: translateX(0) translateY(0)
+    }
+
+    40% {
+
+        transform: translateX(50px) translateY(-200px);
+
+    }
+
+    75% {
+
+        transform: translateX(800px)
+    }
+
+    100% {
+
+        transform: translatex(0) translateY(0);
+
+
+    }
+
+
+}
+
+.shapes__item--shape4 {
+    bottom: 15rem;
+    left: 3%;
+    animation: moveShape4 25s infinite;
+    z-index: -9999;
+
+
+
+}
+
+@keyframes moveShape4 {
+
+
+    0% {
+
+        transform: translateX(0) translateY(0)
+    }
+
+    40% {
+
+        transform: translateX(0px) translateY(200px);
+
+    }
+
+    75% {
+
+        transform: translateX(0px)
+    }
+
+    100% {
+
+        transform: translatex(0) translateY(0);
+
+
+    }
+
+
+}
+
+
+
+
+.shapes__item--shape5 {
+
+    bottom: 12rem;
+    left: 53%;
+    animation: moveShape5 55s inifnite;
+    z-index: -1;
+
+    opacity: 0.7;
+
+}
+
+
+@keyframes moveShape5 {
+
+
+    0% {
+
+        transform: translateX(0) translateY(0);
+
+    }
+
+    40% {
+
+        transform: translateX(50px) translateY(-200px);
+
+    }
+
+    75% {
+
+        transform: translateX(800px) translateY(-800px);
+
+
+    }
+
+    100% {
+
+        transform: translateX(0) translateY(0);
+
+
+    }
+
+
+}
+
+
+.shapes__item--shape6 {
+
+
+    top: 0;
+    left: 55%;
+    z-index: -2;
+
+    animation-name: showTop;
+    animation-duration: 15s;
+    opacity: 0.7;
+
+}
+
+
+
+
+@keyframes showTop {
+
+    0% {
+
+        transform: translateY(-80%);
+
+    }
+
+    50% {
+
+
+        transform: translateX(420px);
+
+    }
+
+    100% {
+
+        transform: translateY(0%);
+
+    }
+
+}
+
+/* Estilos para el efecto de partículas */
+#particles-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    /* Asegura que esté detrás del contenido */
+    pointer-events: none;
+    /* Permite que los clics pasen a través */
+}
+
+#particles-canvas {
+    position: absolute;
+    top: 349px;
+    right: 20%;
+    width: 90%;
+    height: 100%;
+}
+
+#loading-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #333;
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+/* Asegúrate de que el contenido del banner esté por encima de las partículas */
+.banner__content {
+    position: relative;
+    z-index: 2;
+}
+
+/* Asegúrate de que las formas del banner estén por encima de las partículas */
+.banner__shapes {
+    position: relative;
+    z-index: 2;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Estilos seccion servicios*/
+
+
+.layout__services {
+
+    margin: 14rem 10rem;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 8rem;
+
+
+}
+
+
+.services__grid {
+
+
+    max-width: 1320px;
+    margin: 0 auto;
+    z-index: 1;
+
+}
+
+.services__header {
+
+    text-align: left;
+    margin-bottom: 2rem;
+
+
+}
+
+
+.services__subtitle,
+.projects__subtitle,
+.stats__subtitle,
+.reviews__subtitle,
+.clients__subtitle,
+.news__subtitle {
+    font-weight: 500;
+    color: var(--color-subtitle);
+
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+
+
+}
+
+.services__title,
+.projects__title,
+.stats__title,
+.reviews__title,
+.news__title {
+
+    color: var(--color-title);
+    font-size: 6.7rem;
+    line-height: 1.2;
+    font-weight: 500;
+
+}
+
+
+.services__list {
+
+    display: flex;
+
+    flex-direction: row;
+    gap: 3rem;
+
+}
+
+.services__service {
+    width: 96%;
+    height: 100%;
+    padding: 5rem 4rem;
+    padding-bottom: 5rem;
+    border-radius: 3rem;
+    margin-bottom: 4rem;
+    background: linear-gradient(360deg, #f8f8f8, #e3e1e1);
+    border: 1px solid;
+    border-image-source: linear-gradient(90deg, #f8f8f8, #0000001b);
+    display: flex;
+    flex-direction: row;
+    transition: all 300ms ease-in-out;
+}
+
+.services__service:hover {
+
+    background: linear-gradient(180deg, #f8f8f8, #e3e1e1);
+    ;
+
+    border: 1px solid;
+    border-image-source: linear-gradient(360deg, #f8f8f8, #0000001b);
+
+    transform: translateY(1.01rem) scale(1.01);
+
+
+}
+
+.service__container-img {
+
+    margin-right: 2.5rem;
+    max-width: 8.5rem;
+
+    flex: 1;
+
+}
+
+.swiper-slide {
+
+    box-shadow: 0px 0px 20px 13px lightgray;
+}
+
+
+/* Contenedor de los banners */
+.service__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* Alinea los banners a la izquierda */
+    gap: 45px;
+    /* Aumenta la separación entre los botones */
+}
+
+.service__title {
+    color: var(--color-title);
+    font-size: 2.4rem;
+    font-weight: 500;
+    line-height: 4;
+    margin-bottom: 3rem;
+
+
+}
+
+.service__description {
+
+    font-size: 5em;
+    overflow: hidden;
+    margin-bottom: 4rem;
+    text-align: justify;
+
+}
+
+.service__more {
+    font-size: 1-7rem;
+    display: inline-block;
+    font-weight: 500;
+    position: relative;
+    padding-left: 5rem;
+    transition: all 300ms ease-in-out;
+
+}
+
+.service__more::before {
+
+    content: "";
+    width: 3.4rem;
+    height: 0.15rem;
+    background-color: var(--color-text-body);
+    position: absolute;
+    top: 50%;
+    left: 0;
+
+}
+
+.service__more:hover,
+.service__title:hover {
+
+    color: var(--color-bg-btn);
+
+}
+
+.service__more:hover::before {
+
+    background-color: var(--color-bg-btn);
+
+}
+
+/* Estilos generales para las descripciones */
+.service__description {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+
+
+/* Variables para mantener coherencia en el diseño */
+:root {
+    --primary: #333;
+    /* Color primario monocromático */
+    --hover: #ffffff;
+    /* Color de hover */
+    --bg-light: #f5f5f5;
+    /* Fondo */
+    --shadow: rgba(0, 0, 0, 0.1);
+}
+
+.service__banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    /* Espaciado entre elementos */
+    padding: 12px 20px;
+    border-radius: 1px;
+    background-color: var(--bg-light);
+    font-size: 14px;
+    font-weight: bold;
+    width: fit-content;
+    text-align: center;
+    box-shadow: 0em 0em 5em 1em lightgray;
+
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    /* Necesario para la animación */
+    overflow: hidden;
+    /* Evita efectos fuera del borde */
+}
+
+/* Efecto de sombra y animación de pulso */
+.service__banner:hover,
+.service__banner:focus {
+    animation: pulse 750ms;
+    box-shadow: 0 0 0 1.2em transparent;
+    transform: scale(1.05);
+    border-color: var(--hover);
+    color: rgb(59, 56, 56);
+    border: 1px solid rgb(255, 255, 255);
+
+}
+
+/* Animación de pulso */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 var(--hover);
+    }
+}
+
+/* Imagen dentro del banner */
+.service__banner img {
+    width: auto;
+    height: 2em;
+    transition: transform 0.3s ease;
+}
+
+/* Texto dentro del banner */
+.service__banner span {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Pequeña animación en hover sobre la imagen */
+.service__banner:hover img {
+    transform: scale(1.1);
+}
+
+/* Añadir cursor interactivo */
+.service__banner:hover {
+    cursor: pointer;
+}
+
+
+/* Estilos para el enlace "Leer más" */
+.service__more {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.service__more:hover {
+    text-decoration: underline;
+}
+
+
+/*Escalonado de las tarjetas de servicios*/
+
+
+.services__service--bottom {
+
+
+    margin-top: 20rem;
+
+}
+
+.services__service--middle {
+
+    margin-top: 10rem;
+
+}
+
+.services__service--top {
+
+    margin-top: 0;
+    height: 100%;
+}
+
+/*Formas detrás de los servicios*/
+
+.service-shapes__item {
+
+    z-index: -1;
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+}
+
+.service-shapes--shape1 {
+
+    top: -90px;
+    right: -10px;
+    z-index: 9999;
+
+}
+
+.service-shapes--shape2 {
+
+    top: 50px;
+    left: 52%;
+
+
+
+
+}
+
+.service-shapes--shape3 {
+
+    top: 0px;
+    left: 80px;
+    margin-top: 25rem;
+
+
+
+}
+
+/* Estilos para el modal */
+/* Modal - Oculto inicialmente con transparencia */
+/* Modal - Oculto por defecto */
+/* Modal - Oculto inicialmente */
+.modal {
+    visibility: hidden;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(11, 167, 128, 0.5);
+    /* Fondo semitransparente */
+    backdrop-filter: blur(2px);
+    /* Efecto blur en el fondo */
+    border-radius: 8px;
+}
+
+.modal-content {
+    background: rgba(255, 255, 255, 0.8);
+    /* Fondo blanco con transparencia */
+    padding: 20px;
+    border-radius: 8px;
+    width: 50%;
+    max-width: 500px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transform: scale(0.9);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Cuando el modal se muestra, hacer visible con animación */
+.modal.show {
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0s, opacity 0.3s ease-in-out;
+}
+
+.modal.show .modal-content {
+    transform: scale(1);
+}
+
+/* Botón de cerrar */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.close:hover {
+
+    transform: scale(1.5);
+
+}
+
+
+/*Estilos de proyectos*/
+
+.layout__projects {
+    position: relative;
+
+    padding: 14rem 0rem;
+    z-index: 1;
+}
+
+.projects__grid {
+
+    max-width: var(--mx-width);
+    margin: 0 auto;
+
+
+}
+
+.projects__header {
+
+    margin-bottom: 4rem;
+
+}
+
+.projects__subtitle {
+
+
+    text-transform: capitalize;
+
+}
+
+.projects__categories {
+
+    margin-bottom: 5.5rem;
+    display: flex;
+    flex-direction: row;
+    gap: 7rem;
+
+}
+
+.categories__item {
+
+    position: relative;
+    font-size: 2rem;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 0.8 0;
+    transition: all 100ms ease-in-out;
+}
+
+.categories__item--active,
+.categories__item:hover {
+
+    border-bottom: 3px solid var(--color-primary);
+    transition: all 200ms ease-in-out;
+}
+
+.categories__item:hover,
+.categories__item--active:hover {
+
+    border-bottom: 5px solid var(--color-primary);
+
+}
+
+.projects__all {
+
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 4rem 0rem;
+
+}
+
+.projects__project {
+
+
+    width: calc(50% - 3.5rem);
+
+}
+
+.project__container-img {
+
+    width: 90%;
+    border-radius: 3rem 3rem 0 0;
+    overflow: hidden;
+
+}
+
+.project__img {
+
+    width: 100%;
+    transition: all 1s ease-in-out;
+
+}
+
+.project__img:hover {
+
+
+    transform: scale(1.2);
+
+}
+
+.project__content {
+
+    padding: 4rem 5rem;
+    background: var(--color-text-hover);
+    border-radius: 0 0 30px 30px;
+    max-width: 90%;
+
+
+}
+
+
+.project__title {
+
+    font-size: 3.2rem;
+    line-height: 1.2rem;
+    margin-bottom: 2rem;
+    color: var(--color-title);
+    transition: all 300ms ease-in-out;
+}
+
+.project__title:hover {
+
+    color: var(--color-banner);
+
+}
+
+.project__tags {
+
+    font-size: 1.7rem;
+
+}
+
+.project-shapes__item {
+
+
+    position: absolute;
+    z-index: -1;
+    pointer-events: none;
+
+    top: 0;
+
+
+}
+
+.project-shapes--shape1 {
+
+    right: 4%;
+    top: 2%;
+
+
+
+
+}
+
+.project-shapes--shape2 {
+
+    right: 33%;
+    top: 8%;
+}
+
+.project-shapes--shape3 {
+
+    left: -2%;
+    top: 38%;
+
+}
+
+/* Estilospara las estadísticas*/
+
+
+.layout__stats,
+.layout__clients {
+
+    background-color: var(--color-bg-dark);
+    padding: 14rem 11rem;
+
+
+
+}
+
+.stats__container,
+.clients__container {
+
+    max-width: var(--mx-width);
+    margin: 0 auto;
+
+
+}
+
+.stats__title,
+.clients__title {
+
+    color: var(--color-bg-html);
+    font-size: 6.4rem;
+    margin-bottom: 3rem;
+}
+
+.stats__header {
+
+    text-align: center;
+    color: var(--color-bg-html);
+}
+
+.stats__description,
+.clients__description,
+.news__description {
+
+    font-size: 2rem;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 4rem;
+    color: var(--color-description);
+    font-size: 2rem;
+    text-align: center;
+
+
+}
+
+.stats__progress {
+
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+
+}
+
+.stats__stat {
+
+    width: 25%;
+    text-align: center;
+    border: 1px solid var(--color-hover-dark);
+    padding: 7rem 2rem;
+    border-radius: 2rem;
+    transition: all 200ms ease-in-out;
+
+
+
+}
+
+.stats__stat:hover {
+
+    background: linear-gradient(180deg, var(--color-bg-dark), var(--color-hover-dark));
+    transform: scale(1.03);
+
+}
+
+.stat__icon {
+
+    margin-bottom: 2rem;
+
+}
+
+.stat__icon>img {
+
+    display: inline-block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.stant__count {
+    display: inline-block;
+    font-size: 6.4rem;
+    font-weight: 500;
+    color: var(--color-primary);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+
+}
+
+.stat__title {
+
+    color: var(--color-bg-html);
+    font-size: 2rem;
+    line-height: 1.2;
+    font-weight: 500;
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+/*Estilos para las reviews*/
+
+.layout__reviews {
+
+    position: relative;
+    z-index: 1;
+    padding-top: 14rem;
+    padding-bottom: 11rem;
+
+}
+
+.reviews__grid {
+
+    max-width: var(--mx-width);
+    margin: 0 auto;
+
+}
+
+.reviews__header {
+
+    text-align: left;
+
+    margin-bottom: 6rem;
+
+
+}
+
+.reviews__description,
+.news__description {
+
+
+    margin-top: 3rem;
+    width: 50%;
+    font-size: 2rem;
+    margin: 3rem 0;
+    font-weight: 400;
+    color: var(--color-description);
+
+
+}
+
+.reviews__container {
+
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+
+}
+
+.reviews__review {
+
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+
+
+}
+
+
+.review__company {
+
+    display: inline-block;
+    margin-bottom: 3rem;
+
+}
+
+.review__description,
+.news__description {
+
+    font-size: 2.4rem;
+    line-height: 1.2;
+    color: var(--color-bg-dark);
+    margin-bottom: 4rem;
+
+}
+
+
+.review__author {
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+
+}
+
+.author__img {
+
+    border-radius: 35px;
+    overflow: hidden;
+
+}
+
+.author__content {
+
+    flex: 1;
+
+}
+
+.author__name {
+
+    display: block;
+    font-weight: 500;
+    color: var(--color-bg-dark);
+    margin-bottom: 0.3;
+    font-weight: bold;
+    font-size: 1.7rem;
+
+}
+
+.author__description {
+
+    display: block;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--color-text-body);
+    opacity: 0.8;
+
+}
+
+
+.review-shapes__item {
+
+    position: absolute;
+    z-index: -1;
+    pointer-events: none;
+    top: 16%;
+    right: 40%;
+
+
+}
+
+/*Estilos exclusivos para los mejores clientes*/
+
+
+.clients__header {
+
+    text-align: left;
+
+}
+
+.clients__title {
+
+    width: 50%;
+    line-height: 1.2;
+    font-weight: 500;
+    z-index: 1;
+
+}
+
+.clients__description {
+
+    width: 40%;
+    text-align: left;
+    margin: 0;
+    z-index: 1;
+    margin-bottom: 6rem;
+}
+
+.client__shapes__img {
+
+    z-index: -11;
+    animation-name: show;
+    animation: show 10s infinite;
+
+
+}
+
+.shapes__item--shape1 {
+    text-align: right;
+    position: absolute;
+    right: -212px;
+    top: -300px;
+    opacity: 0.1;
+    /* Controla la transparencia */
+
+    /* Simula grosor del contorno */
+}
+
+
+.shapes__img2 {
+
+    width: 100px;
+    height: 50px;
+
+
+}
+
+.layout__clients {
+
+    position: relative;
+
+}
+
+@keyframes show {
+
+    0% {
+
+        transform: translateY(0px);
+
+
+    }
+
+    25% {
+
+        transform: translateY(-18px);
+        ;
+    }
+
+    75% {
+
+        transform: translateY(-39px);
+
+    }
+
+    100% {
+
+        transform: translateY(0px);
+
+    }
+
+}
+
+.clients__item {
+
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    flex-direction: row;
+
+
+}
+
+.clients__img {
+
+    filter: grayscale(100%);
+    opacity: 0.3;
+    transition: all 300ms ease-in-out;
+
+}
+
+.clients__img:hover {
+
+    opacity: 1;
+    filter: grayscale(0);
+    cursor: pointer;
+    transform: scale(1.1);
+
+}
+
+/*Seccion de noticias*/
+
+
+
+.layout__news {
+
+    position: relative;
+    z-index: 1;
+    padding: 14 rem 0;
+    top: 5.3rem;
+    left: 8%;
+
+}
+
+
+.news__container {
+
+    max-width: var(--mx-width);
+
+}
+
+.news__header {
+
+    text-align: center;
+    margin-bottom: 6rem;
+
+}
+
+
+
+
+
+.news__description {
+
+
+    text-align: center;
+    margin: 0 auto;
+}
+
+.news__title {
+
+    margin-bottom: 3rem;
+
+}
+
+.news__list {
+
+    display: flex;
+
+
+}
+
+.news__new {
+
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    border-top: 1px solid var(--color-line-table-box);
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    padding-right: 2rem;
+    border-bottom: 1px solid var(--color-line-table-box);
+    transition: all 300ms ease-in-out;
+}
+
+.news__new:last-child {
+
+    border-left: 1px solid var(--color-line-table-box);
+    padding-left: 2.5rem;
+}
+
+.news__new:hover {
+
+    border-top-color: var(--color-primary);
+
+}
+
+.new__container-img {
+
+    overflow: hidden;
+
+    display: block;
+    border-radius: 3rem;
+
+}
+
+.new__img {
+
+    border-radius: 3rem;
+    transition: all 300ms ease-in-out;
+}
+
+.news__new:hover .new__img {
+
+    transform: scale(1.1);
+
+}
+
+.new__content {
+
+    flex: 1;
+
+}
+
+.new__title {
+
+    font-size: 2.4rem;
+    line-height: 1.4;
+    font-weight: 700;
+    color: var(--color-title);
+    margin-bottom: 2rem;
+    transition: all 300ms ease-in-out;
+
+}
+
+.new__description {
+
+
+    color: var(--color-description);
+    margin-bottom: 3rem;
+    font-size: 1.7rem;
+    font-weight: 400;
+}
+
+
+.new__title:hover,
+.new__more:hover {
+
+    color: var(--color-primary);
+
+}
+
+.new__more {
+
+    font-weight: 500;
+    color: var(--color-hover-dark);
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1.7;
+    transition: all 300ms ease-in-out;
+
+}
+
+.new-icon {
+
+    font-size: 1.3rem;
+    vertical-align: middle;
+
+}
+
+.shapes__item {
+
+    position: absolute;
+    z-index: 2;
+    pointer-events: none;
+
+}
+
+.news-shapes__item {
+
+    position: absolute;
+    z-index: -1;
+
+}
+
+.new-shapes--shapes1 {
+    position: relative;
+    top: 85rem;
+    left: 31rem;
+
+}
+
+
+.new-shapes--shape2 {
+    position: absolute;
+    top: 56rem;
+    right: -30rem;
+
+}
+
+.new-shapes--shape3 {
+
+    bottom: 28rem;
+    left: 10rem;
+    position: absolute;
+}
+
+.news__new-shapes {
+
+    position: absolute;
+    z-index: -1;
+
+}
+
+
+.new-shapes--line {
+
+    bottom: 8rem;
+
+    animation: show1 5s infinite;
+    animation-name: show1;
+}
+
+@keyframes show1 {
+
+    0% {
+
+        transform: var(--color-bg-btn);
+        filter: saturate(200%);
+
+
+    }
+
+    25% {
+
+        filter: saturate(0%);
+
+    }
+
+    50% {
+
+        filter: saturate(200%);
+
+
+
+    }
+
+    75% {
+
+        filter: saturate(0%);
+
+
+    }
+
+    100% {
+
+        filter: saturate(200%);
+
+    }
+}
+
+.new-shapes__container--shape4 {
+    position: absolute;
+    top: 33rem;
+    right: 70rem;
+}
+
+/* Estilos de contacto*/
+
+/* Estilo para la sección de contacto */
+.layout__contact {
+    padding: 4rem 2rem;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Contenedor principal de contacto */
+.contact__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    /* Centra el contenedor */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilos del encabezado de contacto */
+.contact__header {
+    margin-bottom: 3rem;
+}
+
+.contact__subtitle {
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--color-text-light);
+}
+
+.contact__title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin: 1rem 0;
+    color: var(--color-text-dark);
+}
+
+.contact__btn {
+    display: inline-block;
+    padding: 1.2rem 2.5rem;
+    font-size: 1.6rem;
+    background-color: var(--color-primary);
+    color: #fff;
+    border-radius: 2rem;
+    text-decoration: none;
+    transition: background-color 300ms ease;
+    margin-top: 2rem;
+}
+
+.contact__btn:hover {
+    background-color: var(--color-banner);
+}
+
+/* Estilo de las imágenes dentro de la sección de contacto */
+.contact__images {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+    /* Permite que las imágenes se acomoden bien en pantallas pequeñas */
+    justify-content: center;
+    /* Centra las imágenes */
+}
+
+.contact__thumb {
+    position: relative;
+    max-width: 250px;
+    margin-bottom: 2rem;
+}
+
+.contact__img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+/* Estilos para los fondos (shapes) */
+.contact__backshapes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    /* Asegura que las formas de fondo estén detrás del contenido */
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    /* Para evitar que las formas de fondo interfieran con la interacción */
+}
+
+.backshapes__item {
+    position: absolute;
+    opacity: 0.7;
+    transform: scale(1.2);
+}
+
+.backshapes--shape1 {
+    top: 10%;
+    left: 5%;
+}
+
+.backshapes--shape2 {
+    top: 15%;
+    right: 5%;
+}
+
+.backshapes--shape3 {
+    bottom: 10%;
+    left: 20%;
+}
+
+.backshapes--shape4 {
+    bottom: 20%;
+    right: 20%;
+}
+
+.backshapes--shape5 {
+    top: 50%;
+    left: 50%;
+}
+
+.backshapes--shape6 {
+    bottom: 40%;
+    right: 10%;
+}
+
+.backshapes--shape7 {
+    top: 80%;
+    left: 30%;
+}
+
+
+
+/* Estilos del Footer*/
+
+.layout__footer {
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    /* Alineamos los elementos en columna */
+    align-items: center;
+    /* Centra todo horizontalmente */
+    justify-content: center;
+    /* Centra todo verticalmente */
+    text-align: center;
+    /* Asegura que el texto esté centrado */
+    width: 100%;
+    /* Asegura que el footer ocupe todo el ancho disponible */
+}
+
+.footer__container {
+    max-width: var(--mx-width);
+    margin: 0 auto;
+    /* Centra el contenedor */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Centra todo el contenido dentro del contenedor */
+    width: 100%;
+}
+
+.footer__top {
+    padding-bottom: 3rem;
+    display: flex;
+    justify-content: center;
+    /* Centra las redes sociales */
+    align-items: center;
+    /* Asegura que los elementos estén alineados */
+}
+
+.footer__social {
+    display: flex;
+    justify-content: center;
+    /* Centra los íconos de redes sociales */
+    align-items: center;
+    gap: 2rem;
+    /* Espacio entre los íconos */
+}
+
+.social__item {
+    color: var(--color-description);
+    font-size: 3rem;
+    padding: 0.5rem;
+    transition: filter 0.3s ease-in-out;
+}
+
+.social__item:hover {
+    filter: drop-shadow(3px 3px 10px rgba(0, 0, 0, 0.9));
+}
+
+.footer__main {
+    display: flex;
+    justify-content: center;
+    /* Centra las secciones principales */
+    align-items: flex-start;
+    gap: 4rem;
+    /* Espacio entre las secciones */
+    margin-bottom: 4rem;
+    width: 100%;
+}
+
+.footer__fleft,
+.footer__fright {
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Centra los elementos dentro de cada sección */
+}
+
+.fleft__container {
+    border-right: 1px solid var(--color-line-table-box);
+    padding-right: 8rem;
+    margin-right: 4rem;
+    margin-bottom: 8rem;
+}
+
+.fleft__title {
+    font-size: 6.4rem;
+    line-height: 1.2;
+    font-weight: 500;
+    color: var(--color-bg-dark);
+}
+
+.fleft__subtitle {
+    margin-bottom: 4rem;
+    font-size: 1.7rem;
+}
+
+.fleft__group {
+    background-color: white;
+    border-radius: 20px;
+    height: 7.2rem;
+    padding: 1rem;
+    box-shadow: 0 24px 48px -15px #dddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* Alinea verticalmente el formulario */
+}
+
+.fleft__mail-icon {
+    display: inline-block;
+    opacity: 0.7;
+    margin-left: 2rem;
+}
+
+.fleft__form-control {
+    position: relative;
+    flex: 1;
+    color: var(--color-text-body);
+    display: block;
+    padding: 0.5rem 1.5rem;
+    height: auto;
+    border: none;
+    outline: none;
+    margin-left: 1rem;
+}
+
+.fleft__btn {
+    height: 5.5rem;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background-color: var(--color-primary);
+    color: var(--color-bg-html);
+    border-radius: 1.6rem;
+    padding: 1rem 2.8rem;
+    transition: all 300ms ease-in-out;
+}
+
+.fleft__btn:hover {
+    background-color: var(--color-banner);
+}
+
+.footer__widget {
+    margin-bottom: 8rem;
+    flex-basis: 33%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Centra los elementos dentro de los widgets */
+}
+
+.footer__widget--50 {
+    flex-basis: 50%;
+}
+
+.widget__title {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--color-bg-dark);
+    margin-bottom: 3rem;
+    text-align: center;
+    /* Centra el texto del título del widget */
+}
+
+.widget__link {
+    font-size: 1.8rem;
+    padding: 0.8rem 0;
+    display: inline-block;
+    transition: all 300ms linear;
+}
+
+.widget__link:hover {
+    color: var(--color-banner);
+}
+
+.footer__bottom {
+    border-top: 1px solid var(--color-line-table-box);
+    padding: 2.5rem 0;
+    display: flex;
+    justify-content: center;
+    /* Centra los elementos del pie de página */
+    flex-direction: row;
+    gap: 3rem;
+    font-size: 1.8rem;
+    width: 100%;
+}
+
+.copyright__text {
+    color: var(--color-text-body);
+}
+
+.footer__flinks {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    width: 100%;
+}
+
+.flinks__title {
+    transition: all 300ms;
+}
+
+.flinks__title:hover {
+    color: var(--color-banner);
+}
+
+.flinks__item--separator::after {
+    opacity: 0.7;
+    content: "";
+    height: 4px;
+    width: 4px;
+    background-color: var(--color-text-body);
+    border-radius: 58%;
+    position: absolute;
+    top: 46%;
+    left: 36.5%;
+}
+
+
+
+
+
+/* CSS */
+.services__title,
+.projects__title,
+.stats__title,
+.reviews__title,
+.news__title,
+.clients__title,
+.fleft__title {
+
+    background-image: linear-gradient(to right, rgba(228, 187, 7, 0.709), #0cbbac);
+    -webkit-background-clip: text;
+    /* Propiedad específica de Webkit para aplicar el gradiente al texto */
+    color: transparent;
+    /* Oculta el color del texto original */
+    display: inline-block;
+    /* Asegura que el gradiente abarque solo el ancho del texto */
+    transition: all 300ms;
+}
+
+
+.services__title:hover,
+.projects__title:hover,
+.stats__title:hover,
+.reviews__title:hover,
+.news__title:hover,
+.clients__title:hover,
+.fleft__title:hover {
+
+    background-image: linear-gradient(to right, #0cbbac, rgba(228, 187, 7, 0.709));
+    -webkit-background-clip: text;
+    /* Propiedad específica de Webkit para aplicar el gradiente al texto */
+    color: transparent;
+    /* Oculta el color del texto original */
+    display: inline-block;
+    /* Asegura que el gradiente abarque solo el ancho del texto */
+    ;
+}
+
+
+/*NAVEGAVION RESPONSIVE*/
+
+
+.navbar__mobile-btn {
+
+    display: none;
+
+
+
+}
+
+.mobile-btn__wrap {
+
+    height: 5rem;
+    width: 5rem;
+    background-color: var(--color-hover-dark);
+    border: none;
+    border-radius: 3.2rem;
+    transition: all 300ms ease-in-out;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 120px;
+
+}
+
+
+.mobile-btn__line {
+
+    display: block;
+    border-radius: 1rem;
+    background-color: var(--color-bg-html);
+    width: 2rem;
+    height: 0.2rem;
+    margin-bottom: 0.4rem;
+    transition: all 300ms ease-in-out;
+
+}
+
+
+.mobile-btn__line:nth-child(2) {
+
+    margin-right: -0.5rem;
+    width: 1.5rem;
+    height: 0.2rem;
+
+
+}
+
+.mobile-btn__line:last-child {
+
+
+    width: 1rem;
+    height: 0.2rem;
+    margin-right: -1rem;
+}
+
+
+.menu-mobile {
+
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+
+    position: fixed;
+    left: -300px;
+    top: 0;
+    z-index: 10;
+    width: 30rem;
+    height: 100%;
+    background-color: var(--color-bg-html);
+    padding: 5rem 1rem;
+    padding-top: 0;
+    box-shadow: 0px 0px 50px -20px rgba(0, 0, 0, 0.5);
+    overflow-y: auto;
+
+    transition: all 800ms ease-in-out;
+
+}
+
+.menu-mobile__header {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2rem 1rem;
+    border-bottom: 1px solid var(--color-line-table-box);
+    padding: 2rem 0rem;
+    font-size: 1.6rem;
+    cursor: pointer;
+
+
+}
+
+.menu-mobile__container-logo {
+
+
+    width: 15rem;
+
+}
+
+.menu-mobile__link-logo {
+
+
+    display: inline-block;
+    text-decoration: none;
+
+}
+
+.menu-mobile__close {
+
+
+    background-color: transparent;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 2rem;
+    border: 0.1px solid var(--color-description);
+    transition: all 300ms ease-in-out;
+
+
+}
+
+.menu-mobile__close:hover {
+
+    box-shadow: 0px 0px 10px 1px var(--color-description);
+    transform: rotate(180deg);
+
+
+
+}
+
+.menu-mobile__list {
+
+
+    display: block;
+    height: 100%;
+    overflow: auto;
+
+}
+
+
+.menu-mobile--show {
+
+    visibility: visible;
+    opacity: 1;
+    left: 0;
+
+
+}
+
+.menu-mobile__link {
+
+    position: relative;
+    border-bottom: 1px solid lightgray;
+    position: relative;
+    height: 5rem;
+    line-height: 5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--color-text-body);
+    font-weight: 500;
+
+}
+
+.menu-mobile__icon {
+
+    font-size: 1.4rem;
+
+
+}
+
+.menu-mobile__submenu-mobile {
+
+    display: block;
+    visibility: visible;
+    opacity: 1;
+    min-width: 100%;
+    padding: 0;
+    padding-bottom: 1rem;
+
+}
+
+.submenu-mobile__link {
+
+
+    display: block;
+    text-decoration: none;
+    padding: 0.7rem 1rem;
+    font-size: 1.4rem;
+    text-transform: capitalize;
+    font-weight: 500;
+    color: var(--color-text-body);
+}
+
+/* Estilos para el ChatBot */
+#chatbot-fitness {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 64px;
+    height: 64px;
+    cursor: pointer;
+    z-index: 9999;
+}
+
+#chatbot-fitness img {
+    width: 100%;
+
+}
+
+.chatbox {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    width: 300px;
+    background: rgba(10, 10, 10, 0.3);
+    /* fondo oscuro transparente */
+    backdrop-filter: blur(4px);
+    /* efecto blur */
+    -webkit-backdrop-filter: blur(10px);
+    /* para Safari */
+    color: #ffffff;
+    /* texto en neón cian */
+
+    border-radius: 5px;
+    overflow: hidden;
+    z-index: 9999;
+    font-family: 'DM Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 20px rgba(0, 255, 247, 0.575);
+    border: 2px solid rgba(0, 255, 247, 0.555);
+    /* glow opcional */
+}
+
+#chatbot-fitness img {
+    width: 100%;
+    transition: all 0.3s ease;
+
+}
+
+#chatbot-fitness:hover img {
+    transform: scale(1.1) rotate(10deg);
+
+}
+
+.chatbot-avatar {
+    width: 30px;
+    height: 30px;
+
+    vertical-align: middle;
+
+}
+
+
+
+.chatbox-header {
+    background: rgba(65, 199, 226, 0.3);
+    /* #41C7E2 con opacidad */
+    backdrop-filter: blur(18px);
+    /* efecto de desenfoque */
+    -webkit-backdrop-filter: blur(2px);
+    /* soporte para Safari */
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    border-bottom: 1px solid rgba(65, 199, 226, 0.5);
+    /* delineado suave */
+    color: #ffffff;
+    letter-spacing: 0.5px;
+}
+
+
+.chatbox-messages {
+    flex-grow: 1;
+    max-height: 250px;
+    overflow-y: auto;
+    padding: 10px;
+    font-size: 0.9rem;
+    scrollbar-width: thin;
+    transition: all 0.3s ease;
+    scrollbar-color: #ffffff71 transparent;
+}
+
+.chatbox-messages::-webkit-scrollbar {
+    width: 6px;
+}
+
+.chatbox-messages::-webkit-scrollbar-thumb {
+    background-color: #00fff7;
+    border-radius: 10px;
+}
+
+.chatbox-messages::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+
+
+.chatbox input {
+    padding: 10px;
+    border: none;
+    background: rgba(0, 177, 88, 0.3);
+    /* fondo negro con transparencia */
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(2px);
+    color: #ffffff;
+    /* texto neon */
+    border-top: 1px solid rgba(0, 255, 247, 0.3);
+    /* cian translúcido */
+    outline: none;
+    font-size: 0.9rem;
+    transition: background 0.3s ease, border 0.3s ease;
+}
+
+
+.hidden {
+    display: none;
+}
+
+.chatbox input::placeholder {
+    color: #ffffff;
+    opacity: 1;
+    animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 0.6;
+    }
+
+    50% {
+        opacity: 0.2;
+    }
+}
+
+.navbar__login {
+  margin-left: auto;
+  padding-right: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.btn-login {
+  background-color: transparent;
+  border: 2px solid #000;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-login:hover {
+  background-color: #000;
+  color: white;
+}
+
+
+#login-button {
+  background: linear-gradient(135deg, #00c896, #00e0d1);
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+#login-button:hover {
+  background: linear-gradient(135deg, #00e0d1, #00c896);
+  transform: translateY(-2px);
+}
+
+
+.navbar__login {
+  margin-left: auto;
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.login-button {
+  display: inline-block;
+  background: linear-gradient(135deg, #00c896, #00e0d1);
+  color: white;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  position: fixed;
+  top: 20px;
+  right: 7%;
+  z-index: 1000;
+  top: 20px;
+}
+
+.login-button:hover {
+  background: linear-gradient(135deg, #00e0d1, #00c896);
+  transform: translateY(-2px);
+}

@@ -1,0 +1,86 @@
+*{
+
+
+margin: 0;
+padding: 0;
+vertical-align: baseline;
+list-style: none;
+
+}
+
+*,
+*::before,
+*::after{
+
+
+
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    
+
+
+}
+
+
+html{
+
+scroll-behavior: smooth;
+
+
+}
+
+body{
+
+
+scroll-behavior: smooth;
+text-rendering: optimizeSpeed;
+line-height: 1.5;
+min-height: 100vh;
+
+}
+
+ul, ol li{
+
+
+list-style: none;
+text-decoration: none;
+
+}
+
+a{
+display: block;
+text-decoration:none;
+color:inherit;
+
+
+
+
+}
+
+
+p a{
+
+display: inline;
+list-style: none;
+text-decoration: none;
+
+}
+
+img, video, iframe, picture, figure{
+
+max-width: 100%;
+display: block;
+
+}
+
+form, input, select, textarea, button, label{
+
+font-family: inherit;
+font-family: inherit;
+font-size: inherit;
+color: inherit;
+
+
+
+}
