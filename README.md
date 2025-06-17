@@ -57,9 +57,10 @@ Estos mockups ilustran el diseño responsive y la experiencia visual planteada p
 
 ## 👨‍💻 Autor
 
-<p align="center">
-  <strong>Desarrollado por Ignacio Suárez Ruiz</strong><br>
-  <a href="https://www.linkedin.com/in/ignacio-su%C3%A1rez-ruiz-94186530a/">🔗 LinkedIn</a><br>
-  📧 igna1995@gmail.com
-</p>
+---
+
+## 👨‍💻 Desarrollado por Ignacio Suárez Ruiz
+
+[🔗 LinkedIn](https://www.linkedin.com/in/ignacio-su%C3%A1rez-ruiz-94186530a/)  
+📧 igna1995@gmail.com
 
