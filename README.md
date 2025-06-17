@@ -45,7 +45,7 @@ Estos mockups ilustran el diseño responsive y la experiencia visual planteada p
   <img src="https://img.shields.io/badge/OpenAI-412991?style=flat&logo=openai&logoColor=white"/>
   <img src="https://img.shields.io/badge/Canva-00C4CC?style=flat&logo=canva&logoColor=white"/>
   <img src="https://img.shields.io/badge/VS%20Code-007ACC?style=flat&logo=visual-studio-code&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Hostinger-673de6?style=flat&logo=hostinger&logoColor=white"/>
+
 </p>
 
 
