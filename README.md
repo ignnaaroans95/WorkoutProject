@@ -36,15 +36,18 @@ Estos mockups ilustran el diseño responsive y la experiencia visual planteada p
 
 ---
 
-##  Tecnologías utilizadas
+## 🛠️ Tecnologías utilizadas
 
-- HTML · CSS · JavaScript
-- OpenAI API (Chatbot IA)
-- Canva (diseño visual)
-- Visual Studio Code
-- Hostinger (hosting)
+<p align="left">
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white"/>
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white"/>
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black"/>
+  <img src="https://img.shields.io/badge/OpenAI-412991?style=flat&logo=openai&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Canva-00C4CC?style=flat&logo=canva&logoColor=white"/>
+  <img src="https://img.shields.io/badge/VS%20Code-007ACC?style=flat&logo=visual-studio-code&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Hostinger-673de6?style=flat&logo=hostinger&logoColor=white"/>
+</p>
 
----
 
 ## 📄 Documentación del TFC
 
