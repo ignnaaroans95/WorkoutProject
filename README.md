@@ -69,7 +69,7 @@ Estos mockups ilustran el diseño responsive y la experiencia visual planteada p
 
 <p align="center">
   <a href="WorkOutTorrelodones/assets/pdf/manuscrito.pdf">
-    <img src="WorkOutTorrelodones/assets/img/preview-manuscrito.png" alt="Miniatura manuscrito TFC" width="500"/>
+    <img src="WorkOutTorrelodones/assets/img/preview-tfc.gif" alt="Miniatura manuscrito TFC" width="500"/>
   </a>
 </p>
 
