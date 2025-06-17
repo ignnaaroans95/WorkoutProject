@@ -61,7 +61,17 @@ Estos mockups ilustran el diseño responsive y la experiencia visual planteada p
 
 ## 👨‍💻 Desarrollado por Ignacio Suárez Ruiz
 
-[🔗 LinkedIn](https://www.linkedin.com/in/ignacio-suarez-ruiz/)
+---
+
+## 👨‍💻 Desarrollado por Ignacio Suárez Ruiz
+
+<p align="center">
+  <a href="https://www.linkedin.com/in/ignacio-suárez-ruiz-94105630a/">
+    <img src="https://img.shields.io/badge/-LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white"/>
+  </a>
+  <br/>
+  📧 igna1995@gmail.com
+</p>
 
 📧 igna1995@gmail.com
 
