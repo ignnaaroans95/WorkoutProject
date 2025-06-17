@@ -23,9 +23,11 @@ Incluye:
 ## 🖼️ Mockups del proyecto
 
 <p align="center">
-  <img src="assets/mockups/mockup1.png" width="700"/>
+ <img src="https://github.com/ignaaroans95/WorkoutProject/blob/main/mockup1.png?raw=true" width="700"/>
+
   <br/>
-  <img src="assets/mockups/mockup2.png" width="700"/>
+<img src="https://github.com/ignaaroans95/WorkoutProject/blob/main/mockup2.png?raw=true" width="700"/>
+
 </p>
 
 ---
