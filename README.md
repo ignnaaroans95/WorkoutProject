@@ -7,16 +7,15 @@ Con chatbot personalizado, WhatsApp, diseño responsive y escalabilidad real.</p
 
 ---
 
-## 🔥 Descripción del proyecto
+##  Descripción del proyecto
 
 Workout Torrelodones es una plataforma web orientada a entrenadores personales.  
 Permite ofrecer sus servicios de forma profesional, moderna y con interacción automática.
 
 Incluye:
-- ✅ Diseño responsive limpio y accesible
-- ✅ Chatbot con IA entrenado con OpenAI API
-- ✅ Formularios personalizados y contacto WhatsApp
-- ✅ Enfoque real de negocio y escalabilidad
+-  Diseño responsive limpio y accesible
+-  Chatbot con IA entrenado con OpenAI API(Actualmente en construcción)
+-  Enfoque real de negocio y escalabilidad
 
 ---
 
