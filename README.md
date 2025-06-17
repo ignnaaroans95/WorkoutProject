@@ -51,7 +51,6 @@ Estos mockups ilustran el diseño responsive y la experiencia visual planteada p
 
 ## 📄 Documentación del TFC
 
-## 📄 Documentación del TFC
 
 ### 🧾 Presentación visual
 
