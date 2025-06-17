@@ -23,7 +23,7 @@ Incluye:
 
 ##  Mockups del proyecto
 
-Estos mockups ilustran el diseño responsive y la experiencia visual planteada para entrenadores personales y usuarios de la plataforma.
+Estos mockups ilustran el diseño responsive y la experiencia visual planteada para  usuarios de la plataforma.
 
 <p align="center">
   <img src="WorkOutTorrelodones/assets/mockups/mockup1.png" width="700"/>
