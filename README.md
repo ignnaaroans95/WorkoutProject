@@ -22,14 +22,16 @@ Incluye:
 
 ## 🖼️ Mockups del proyecto
 
+## 🖼️ Mockups del proyecto
+
 <p align="center">
-![Mockup 1](https://github.com/ignaaron95/WorkoutProject/blob/main/assets/mockups/mockup1.png?raw=true)
-
-
+  <img src="WorkOutTorrelodones/assets/mockups/mockup1.png" width="700"/>
   <br/>
-![Mockup 1](https://github.com/ignaaron95/WorkoutProject/blob/main/assets/mockups/mockup1.png?raw=true)
-
+  <img src="WorkOutTorrelodones/assets/mockups/mockup2.png" width="700"/>
+  <br/>
+  <img src="WorkOutTorrelodones/assets/mockups/mockup3.png" width="700"/>
 </p>
+
 
 ---
 
