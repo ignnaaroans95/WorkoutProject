@@ -1,9 +1,9 @@
-<h1 align="center">🏋️ Workout Torrelodones</h1>
-
 <p align="center">
-Aplicación real para entrenadores personales, desarrollada como TFC.  
-Con chatbot personalizado, WhatsApp, diseño responsive y escalabilidad real.
+  <img src="WorkOutTorrelodones/assets/img/header-login.png" alt="Workout Torrelodones Logo" width="250"/>
 </p>
+
+<p align="center"><strong>Aplicación real para entrenadores personales, desarrollada como TFC de DAM</strong><br>
+Con chatbot personalizado, WhatsApp, diseño responsive y escalabilidad real.</p>
 
 ---
 
@@ -20,9 +20,11 @@ Incluye:
 
 ---
 
-## 🖼️ Mockups del proyecto
 
-## 🖼️ Mockups del proyecto
+
+##  Mockups del proyecto
+
+Estos mockups ilustran el diseño responsive y la experiencia visual planteada para entrenadores personales y usuarios de la plataforma.
 
 <p align="center">
   <img src="WorkOutTorrelodones/assets/mockups/mockup1.png" width="700"/>
@@ -35,7 +37,7 @@ Incluye:
 
 ---
 
-## 💻 Tecnologías utilizadas
+##  Tecnologías utilizadas
 
 - HTML · CSS · JavaScript
 - OpenAI API (Chatbot IA)
@@ -55,4 +57,4 @@ Incluye:
 
 Desarrollado por Ignacio Suárez Ruiz  
 🔗 [LinkedIn](https://www.linkedin.com/in/tuusuario)  
-📧 igna.suarez.dev@gmail.com
+📧 1995igna@gmail.com
