@@ -23,10 +23,11 @@ Incluye:
 ## 🖼️ Mockups del proyecto
 
 <p align="center">
- <img src="https://github.com/ignaaroans95/WorkoutProject/blob/main/mockup1.png?raw=true" width="700"/>
+![Mockup 1](https://github.com/ignaaron95/WorkoutProject/blob/main/assets/mockups/mockup1.png?raw=true)
+
 
   <br/>
-<img src="https://github.com/ignaaroans95/WorkoutProject/blob/main/mockup2.png?raw=true" width="700"/>
+![Mockup 1](https://github.com/ignaaron95/WorkoutProject/blob/main/assets/mockups/mockup1.png?raw=true)
 
 </p>
 
