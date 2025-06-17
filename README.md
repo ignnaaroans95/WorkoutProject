@@ -56,7 +56,7 @@ Estos mockups ilustran el diseño responsive y la experiencia visual planteada p
 ### 🧾 Presentación visual
 
 <p align="center">
-  <a href="WorkOutTorrelodones/assets/Presentacion.pdf">
+  <a href="WorkOutTorrelodones/assets/Presentación.pdf">
     <img src="WorkOutTorrelodones/assets/img/preview-presentacion.png" alt="Miniatura presentación PDF" width="500"/>
   </a>
 </p>
