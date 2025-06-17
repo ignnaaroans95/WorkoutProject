@@ -51,9 +51,29 @@ Estos mockups ilustran el diseño responsive y la experiencia visual planteada p
 
 ## 📄 Documentación del TFC
 
-📥 [Presentación visual (PDF)](assets/Clean_and_Modern_App_Portfolio_Mockup_Presentation.pdf)
+## 📄 Documentación del TFC
+
+### 🧾 Presentación visual
+
+<p align="center">
+  <a href="WorkOutTorrelodones/assets/pdf/presentacion.pdf">
+    <img src="WorkOutTorrelodones/assets/img/preview-presentacion.png" alt="Miniatura presentación PDF" width="500"/>
+  </a>
+</p>
+
+> Documento visual que resume el enfoque gráfico y funcional de la aplicación, incluyendo mockups y la estructura UI.
 
 ---
+
+### 📘 Manuscrito del proyecto
+
+<p align="center">
+  <a href="WorkOutTorrelodones/assets/pdf/manuscrito.pdf">
+    <img src="WorkOutTorrelodones/assets/img/preview-manuscrito.png" alt="Miniatura manuscrito TFC" width="500"/>
+  </a>
+</p>
+
+> Documento técnico completo del TFC, incluyendo análisis de viabilidad, desarrollo, herramientas utilizadas y roadmap.
 
 
 
