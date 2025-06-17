@@ -56,7 +56,7 @@ Estos mockups ilustran el diseño responsive y la experiencia visual planteada p
 ### 🧾 Presentación visual
 
 <p align="center">
-  <a href="WorkOutTorrelodones/assets/presentacion.pdf">
+  <a href="WorkOutTorrelodones/assets/Presentacion.pdf">
     <img src="WorkOutTorrelodones/assets/img/preview-presentacion.png" alt="Miniatura presentación PDF" width="500"/>
   </a>
 </p>
@@ -68,7 +68,7 @@ Estos mockups ilustran el diseño responsive y la experiencia visual planteada p
 ### 📘 Manuscrito del proyecto
 
 <p align="center">
-  <a href="WorkOutTorrelodones/assets/definitivo.pdf">
+  <a href="WorkOutTorrelodones/assets/Definitivo.pdf">
     <img src="WorkOutTorrelodones/assets/img/preview-tfc.gif" alt="Miniatura manuscrito TFC" width="500"/>
   </a>
 </p>
