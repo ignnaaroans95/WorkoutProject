@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Configuración
     const config = {
-        logoUrl: "../assets/img/ciclista.png", // Correct syntax for the logo URL
+        logoUrl: "./assets/img/ciclista.png", // Correct syntax for the logo URL
         particleColor: '#FDFDFD',
         scatteredColor: '#00D2FF', // Color azul turquesa
         secondaryScatteredColor: '#B6FF00', // Color verde lima
