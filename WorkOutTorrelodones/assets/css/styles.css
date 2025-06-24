@@ -758,6 +758,24 @@ body {
 
 }
 
+.clients__logos {
+    display: flex;
+    justify-content: center; /* <-- centra horizontalmente */
+    align-items: center;      /* <-- centra verticalmente (si tiene altura fija) */
+    gap: 20px;                /* espacio entre las imágenes */
+    flex-wrap: wrap;          /* opcional: si en móvil quieres que bajen a otra fila */
+}
+
+.clients__item {
+    /* opcional: si quieres limitar el tamaño de cada img */
+    max-width: 400px;
+}
+
+.clients__img {
+    width: 100%;  /* para que respete el tamaño del item */
+    height: auto;
+}
+
 
 .services__list {
 
