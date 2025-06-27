@@ -86,7 +86,7 @@ Estos mockups ilustran el diseño responsive y la experiencia visual planteada p
     <img src="https://img.shields.io/badge/-LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white"/>
   </a>
   <br/>
-  📧 igna1995@gmail.com
+  📧 1995igna@gmail.com
 </p>
 
 
