@@ -1,6 +1,9 @@
 <p align="center">
-  <img src="WorkOutTorrelodones/assets/img/header-login.png" alt="Workout Torrelodones Logo" width="250"/>
+  <a href="[https://tu-proyecto.vercel.app](https://workout-project-cpgh-7wd12dg6u.vercel.app/)" target="_blank">
+    <img src="WorkOutTorrelodones/assets/img/ver.png" alt="Ver Demo" width="200"/>
+  </a>
 </p>
+
 
 <p align="center"><strong>Aplicación real para entrenadores personales, desarrollada como TFC de DAM</strong><br>
 Con chatbot personalizado, WhatsApp, diseño responsive y escalabilidad real.</p>
