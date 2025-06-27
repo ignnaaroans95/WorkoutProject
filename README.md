@@ -1,6 +1,6 @@
 <p align="center">
-  <a href="(https://workout-project-cpgh-7wd12dg6u.vercel.app/) target="_blank">
-    <img src="WorkOutTorrelodones/assets/img/ver.png" alt="Ver Demo" width="200"/>
+  <a href="https://workout-project-cpgh-7wd12dg6u.vercel.app/" target="_blank">
+    <img src="WorkOutTorrelodones/assets/img/ver.png" alt="Ver Demo" width="400"/>
   </a>
 </p>
 
