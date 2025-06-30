@@ -55,8 +55,8 @@ El chatbot está diseñado con estética **cyberpunk**, ubicado en la esquina in
 
 ### 🖼️ Mockup del Chatbot:
 <p align="center">
-  <a href="WorkOutTorrelodones/assets/img/gifBot.gif" target="_blank">
-    <img src="WorkOutTorrelodones/assets/mockups/enlaceGitBot.png" width="500" alt="Mockup del Chatbot"/>
+  <a href="WorkOutTorrelodones/assets/img/gifBot.gif" width="500" target="_blank">
+    <img src="WorkOutTorrelodones/assets/img/enlaceGitBot.png" width="500" alt="Mockup del Chatbot"/>
   </a>
 </p>
 
