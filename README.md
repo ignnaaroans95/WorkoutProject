@@ -54,9 +54,10 @@ El chatbot está diseñado con estética **cyberpunk**, ubicado en la esquina in
 - Backend Express (Node.js) para control de contexto y temas válidos
 
 ### 🖼️ Mockup del Chatbot:
-
 <p align="center">
-  <img src="WorkOutTorrelodones/assets/img/enlaceGitBot.png" width="700"/>
+  <a href="WorkOutTorrelodones/assets/img/gifBot.gif" target="_blank">
+    <img src="WorkOutTorrelodones/assets/mockups/enlaceGitBot.png" width="500" alt="Mockup del Chatbot"/>
+  </a>
 </p>
 
 ---
