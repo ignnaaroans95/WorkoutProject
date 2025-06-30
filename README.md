@@ -35,18 +35,18 @@ Estos mockups ilustran el diseño responsive y la experiencia visual planteada p
 
 ---
 
-## 🤖 Sección del Chatbot
+##  Sección del Chatbot
 
 El chatbot está diseñado con estética **cyberpunk**, ubicado en la esquina inferior derecha. Actúa como un entrenador personal digital con respuestas precisas y una personalidad marcada.
 
-### 🎯 Funcionalidad:
+###  Funcionalidad:
 
 - Responde sobre entrenamiento, nutrición y servicios de la web.
 - Si se le pregunta algo fuera de tema, responde con un tono sarcástico y humorístico.
 - Conectado a un backend propio (`coachbot-backend`) usando la API de OpenAI.
 - Integración sencilla vía modal fijo con efecto blur al desplegarse.
 
-### 🧠 Stack técnico:
+###  Stack técnico:
 
 - HTML, CSS y JavaScript
 - API de OpenAI
