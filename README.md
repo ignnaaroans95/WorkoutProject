@@ -9,7 +9,7 @@ Con chatbot personalizado, WhatsApp, diseño responsive y escalabilidad real.</p
 
 ---
 
-## 🧩 Descripción del proyecto
+##  Descripción del proyecto
 
 Workout Torrelodones es una plataforma web orientada a entrenadores personales.  
 Permite ofrecer sus servicios de forma profesional, moderna y con interacción automática.
@@ -21,7 +21,7 @@ Incluye:
 
 ---
 
-## 🖼️ Mockups del proyecto
+##  Mockups del proyecto
 
 Estos mockups ilustran el diseño responsive y la experiencia visual planteada para usuarios de la plataforma.
 
@@ -53,7 +53,7 @@ El chatbot está diseñado con estética **cyberpunk**, ubicado en la esquina in
 - Estilos visuales inspirados en ciencia ficción
 - Backend Express (Node.js) para control de contexto y temas válidos
 
-### 🖼️ Mockup del Chatbot:
+###  Mockup del Chatbot:
 <p align="center">
   <a href="WorkOutTorrelodones/assets/img/gifBot.gif" width="500" target="_blank">
     <img src="WorkOutTorrelodones/assets/img/enlaceGitBot.png" width="500" alt="Mockup del Chatbot"/>
@@ -62,7 +62,7 @@ El chatbot está diseñado con estética **cyberpunk**, ubicado en la esquina in
 
 ---
 
-## 🛠️ Tecnologías utilizadas
+##  Tecnologías utilizadas
 
 <p align="left">
   <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white"/>
@@ -75,9 +75,9 @@ El chatbot está diseñado con estética **cyberpunk**, ubicado en la esquina in
 
 ---
 
-## 📄 Documentación del TFC
+##  Documentación del TFC
 
-### 🧾 Presentación visual
+###  Presentación visual
 
 <p align="center">
   <a href="WorkOutTorrelodones/assets/Presentación.pdf">
