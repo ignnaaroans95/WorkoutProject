@@ -4,8 +4,11 @@
   </a>
 </p>
 
-<p align="center"><strong>Aplicación real para entrenadores personales, desarrollada como TFC de DAM</strong><br>
-Con chatbot personalizado, WhatsApp, diseño responsive y escalabilidad real.</p>
+<p align="center">
+  <em>Desarrollado para funcionar en la nube. Accede a la demo en tiempo real.</em><br>
+  <strong>Aplicación real para entrenadores personales - TFC de DAM</strong><br>
+  Con chatbot personalizado, WhatsApp, diseño responsive y enfoque escalable.
+</p>
 
 ---
 
