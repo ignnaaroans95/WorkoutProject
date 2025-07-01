@@ -4,12 +4,15 @@
   </a>
 </p>
 
-<p align="center"><strong>Aplicación real para entrenadores personales, desarrollada como TFC de DAM</strong><br>
-Con chatbot personalizado, WhatsApp, diseño responsive y escalabilidad real.</p>
+<p align="center">
+  <em>Desarrollado para funcionar en la nube. Accede a la demo en tiempo real.</em><br>
+  <strong>Aplicación real para entrenadores personales - TFC de DAM</strong><br>
+  Con chatbot personalizado, WhatsApp, diseño responsive y enfoque escalable.
+</p>
 
 ---
 
-## 🧩 Descripción del proyecto
+##  Descripción del proyecto
 
 Workout Torrelodones es una plataforma web orientada a entrenadores personales.  
 Permite ofrecer sus servicios de forma profesional, moderna y con interacción automática.
@@ -21,7 +24,7 @@ Incluye:
 
 ---
 
-## 🖼️ Mockups del proyecto
+##  Mockups del proyecto
 
 Estos mockups ilustran el diseño responsive y la experiencia visual planteada para usuarios de la plataforma.
 
@@ -35,33 +38,34 @@ Estos mockups ilustran el diseño responsive y la experiencia visual planteada p
 
 ---
 
-## 🤖 Sección del Chatbot
+##  Sección del Chatbot
 
 El chatbot está diseñado con estética **cyberpunk**, ubicado en la esquina inferior derecha. Actúa como un entrenador personal digital con respuestas precisas y una personalidad marcada.
 
-### 🎯 Funcionalidad:
+###  Funcionalidad:
 
 - Responde sobre entrenamiento, nutrición y servicios de la web.
 - Si se le pregunta algo fuera de tema, responde con un tono sarcástico y humorístico.
 - Conectado a un backend propio (`coachbot-backend`) usando la API de OpenAI.
 - Integración sencilla vía modal fijo con efecto blur al desplegarse.
 
-### 🧠 Stack técnico:
+###  Stack técnico:
 
 - HTML, CSS y JavaScript
 - API de OpenAI
 - Estilos visuales inspirados en ciencia ficción
 - Backend Express (Node.js) para control de contexto y temas válidos
 
-### 🖼️ Mockup del Chatbot:
-
+###  Mockup del Chatbot:
 <p align="center">
-  <img src="WorkOutTorrelodones/assets/mockups/mockup-chatbot.png" width="700"/>
+  <a href="WorkOutTorrelodones/assets/img/gifBot.gif" width="500" target="_blank">
+    <img src="WorkOutTorrelodones/assets/img/enlaceGitBot.png" width="500" alt="Mockup del Chatbot"/>
+  </a>
 </p>
 
 ---
 
-## 🛠️ Tecnologías utilizadas
+##  Tecnologías utilizadas
 
 <p align="left">
   <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white"/>
@@ -74,9 +78,9 @@ El chatbot está diseñado con estética **cyberpunk**, ubicado en la esquina in
 
 ---
 
-## 📄 Documentación del TFC
+##  Documentación del TFC
 
-### 🧾 Presentación visual
+###  Presentación visual
 
 <p align="center">
   <a href="WorkOutTorrelodones/assets/Presentación.pdf">
