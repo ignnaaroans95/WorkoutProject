@@ -333,7 +333,7 @@ body {
     min-height: 60rem;
     border-radius: 60px;
     overflow: hidden;
-    background: --color-banner;
+       background: linear-gradient(to right, rgba(228, 187, 7, 0.709), rgb(41, 151, 133));
     box-shadow: 0 0px 2px 2px var(--color-banner);
 
 }
@@ -666,8 +666,10 @@ body {
 
 #particles-canvas {
     position: absolute;
-    top: 349px;
-    right: 20%;
+    top: 228px;
+    right: 20%
+750.203px
+;
     width: 90%;
     height: 100%;
 }
